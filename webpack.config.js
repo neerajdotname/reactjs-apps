@@ -40,12 +40,13 @@ function makeIndex () {
   var list = fs.readdirSync(CODE).filter(function(dir) {
     return isDirectory(path.join(CODE, dir));
   }).map(function (dir) {
-    return React.DOM.li({}, React.DOM.a({href: '/'+dir}, dir.replace(/-/g, ' ')));
+    return React.DOM.p({}, React.DOM.a({href: '/'+dir}, dir.replace(/-/g, ' ')));
   });
+
   var markup = React.renderToStaticMarkup((
     React.DOM.html({},
       React.DOM.body({id: "index"},
-        React.DOM.ul({}, list)
+        React.DOM.p({}, list)
       )
     )
   ));
