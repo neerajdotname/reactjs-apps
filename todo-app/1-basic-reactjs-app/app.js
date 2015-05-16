@@ -8,5 +8,5 @@ var HelloMessage = React.createClass({
   }
 });
 
-React.render(<HelloMessage name="John6" />, document.body);
+React.render(<HelloMessage name="John7" />, document.body);
 
