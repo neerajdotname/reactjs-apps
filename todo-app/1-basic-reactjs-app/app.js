@@ -1,12 +1,17 @@
 var React = require('react');
 
 var HelloMessage = React.createClass({
+
+
   render () {
+    greeting = 'Hello';
+    msg = `${greeting} ${this.props.name}`
+    console.log(msg);
+
     return  (
-        <div>Hello {this.props.name}</div>
+        <div> { msg } </div>
     );
   }
 });
 
 React.render(<HelloMessage name="John7" />, document.body);
-
